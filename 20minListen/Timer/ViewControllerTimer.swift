@@ -16,7 +16,7 @@ enum SelectAction:String{
     case correct
     case incorrect
 }
-extension ViewController{
+extension ViewController:AVSpeechSynthesizerDelegate{
     @objc func timerEnglish(_ timer:Timer){
         guard let timerLeft = timerLeft else { return }
         guard startButton.isSelected == false else{return}
@@ -27,6 +27,7 @@ extension ViewController{
             let int = Int.random(in: 0..<englishArray.count)
             //乱数から取得した整数を元に英文を取得
             nowEnglishString = englishArray[int]
+            //speechAudioRecording()
             let content = UNMutableNotificationContent()
             content.title = "what do you mean?"
             content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "lesson.mp3"))
@@ -35,7 +36,7 @@ extension ViewController{
             let request = UNNotificationRequest(identifier: self.nowGetTime(), content: content, trigger: nil)
             let actionOne = UNNotificationAction(identifier: SelectAction.correct.rawValue,
                                                 title: "正解",
-                                                options: [.foreground])
+                                                options: [])
             let actionTwo = UNNotificationAction(identifier: SelectAction.incorrect.rawValue,
                                                 title: "不正解",
                                                 options: [.destructive])
@@ -44,13 +45,69 @@ extension ViewController{
                                                   intentIdentifiers: [],
                                                   options: [])
             UNUserNotificationCenter.current().setNotificationCategories([category])
-            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: {[weak self] error in
+                guard let _ = self else{return}
+                guard error == nil else{return}
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {[weak self] in
+                    guard let _ = self else{return}
+                    // 1.0秒後に実行したい処理
+                    let talker = AVSpeechSynthesizer()
+                    let speech = AVSpeechUtterance(string: self!.nowEnglishString)
+                    speech.voice = AVSpeechSynthesisVoice(language: "en-US")
+                    talker.speak(speech)
+                }
+            })
             
             self.timerLeft = TIMERLENGTH
             addingEnglishArray()
         }else{
             self.timerLeft -= Double(1.0)
         }
+    }
+    
+    private func speechAudioRecording(){
+        talker = AVSpeechSynthesizer()
+        talker.delegate = self
+        let speech = AVSpeechUtterance(string: nowEnglishString)
+        speech.voice = AVSpeechSynthesisVoice(language: "en-US")
+        let settings: [String : Any] = [
+            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue,
+            AVSampleRateKey: 12000.0,
+            AVNumberOfChannelsKey: 1,
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC)
+        ]
+        recordingSession = AVAudioSession.sharedInstance()
+        do {
+            try recordingSession.setCategory(.playAndRecord, mode: .default)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() { [weak self] allowed in
+                guard let _ = self else{return}
+                DispatchQueue.main.async {
+                    if allowed {
+                        do{
+                            self!.audioRecorder = try AVAudioRecorder(url: URL(string: Bundle.main.path(forResource: "sample", ofType: "mp3")!)!, settings: settings)
+                            self!.audioRecorder?.record()
+                        }catch{
+                            print("レコーディング設定に失敗しました。")
+                        }
+                    } else {
+                        // failed to record!
+                    }
+                }
+            }
+        } catch {
+            // failed to record!
+        }
+        talker.speak(speech)
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+        print("レコーディングがスタート")
+    }
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        guard let _ = audioRecorder else{return}
+        audioRecorder.stop()
+        print("レコーディングがストップ")
     }
     
     private func downLoadURL(_ url:URL,completion:((URL)->Void)?){

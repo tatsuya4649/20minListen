@@ -25,7 +25,7 @@ extension ViewController{
     @objc func startTimer(_ sender:UIButton){
         print("タイマーをスタートします。")
         if timer == nil{
-            TIMERLENGTH = Double(5)
+            TIMERLENGTH = Double(10)
             timerLeft = TIMERLENGTH
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerEnglish), userInfo: nil, repeats: true)
             NotificationCenter.default.addObserver(self, selector: #selector(enterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)

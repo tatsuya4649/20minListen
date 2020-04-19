@@ -22,15 +22,26 @@ class ViewController: UIViewController {
     var downloadTask:URLSessionDownloadTask!
     var badgeValue : Int!
     var appBadgeValue : Int!
+    var audioRecorder : AVAudioRecorder!
+    var talker : AVSpeechSynthesizer!
+    var recordingSession: AVAudioSession!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        //ローカル通知を行う設定をする
+        localNotification()
         //タイマーをスタートさせるボタンをセッティングする
         settingStartButton()
         //英語の配列を準備する関数
         englishSetting()
-        //ローカル通知を行う設定をする
-        localNotification()
+        do{
+            let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
+            try audioSession.setCategory(AVAudioSession.Category.playback)
+            try audioSession.setActive(true, options: [])
+            print("音声を流します")
+        }catch{
+            print("Audio再生のセットカテゴリに失敗しました。")
+        }
         // Do any additional setup after loading the view.
     }
 

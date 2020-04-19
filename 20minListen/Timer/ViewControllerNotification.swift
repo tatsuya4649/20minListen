@@ -21,10 +21,6 @@ extension ViewController:UNUserNotificationCenterDelegate{
         }
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        var talker = AVSpeechSynthesizer()
-        let speech = AVSpeechUtterance(string: nowEnglishString)
-        speech.voice = AVSpeechSynthesisVoice(language: "en-US")
-        talker.speak(speech)
         completionHandler([.alert, .sound])  // 通知バナー表示、通知音の再生を指定
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -34,7 +30,6 @@ extension ViewController:UNUserNotificationCenterDelegate{
         guard let nowEnglishString = nowEnglishString else{return}
         guard let parent = self.parent as? TabBarController else{return}
         if let collection = parent.viewControllers?.last?.children.first as? EnglishListViewController{
-            
             switch SelectAction(rawValue: response.actionIdentifier) {
             case .correct:
                 collection.englishDataCollect![request.identifier] = .correct

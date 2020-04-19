@@ -25,6 +25,7 @@ extension ViewController{
     @objc func startTimer(_ sender:UIButton){
         print("タイマーをスタートします。")
         if timer == nil{
+            //単位は秒数だから、分にしたければminute*60,時間にしたければhour*60*60
             TIMERLENGTH = Double(10)
             timerLeft = TIMERLENGTH
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerEnglish), userInfo: nil, repeats: true)

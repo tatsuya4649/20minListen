@@ -33,7 +33,7 @@ extension ViewController:AVSpeechSynthesizerDelegate{
             content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "lesson.mp3"))
             content.body = nowEnglishString
             content.categoryIdentifier = "categorySelect"
-            let request = UNNotificationRequest(identifier: self.nowGetTime(), content: content, trigger: nil)
+            let request = UNNotificationRequest(identifier: "category", content: content, trigger: nil)
             let actionOne = UNNotificationAction(identifier: SelectAction.correct.rawValue,
                                                 title: "正解",
                                                 options: [])

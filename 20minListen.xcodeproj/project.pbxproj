@@ -15,7 +15,7 @@
 		740BD7BB2447E71D00076F21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740BD7BA2447E71D00076F21 /* ViewController.swift */; };
 		741B7F20244BCE02008583D4 /* NotificationViewControllerSpeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B7F1F244BCE02008583D4 /* NotificationViewControllerSpeak.swift */; };
 		741B7F23244BD875008583D4 /* EnglishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B7F22244BD875008583D4 /* EnglishCell.swift */; };
-		748D1834244C1E7E006F37D8 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 748D1833244C1E7E006F37D8 /* sample.mp3 */; };
+		748D1834244C1E7E006F37D8 /* sample.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 748D1833244C1E7E006F37D8 /* sample.m4a */; };
 		74A9DBBF244A946D0090F31A /* ViewControllerStartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBBE244A946D0090F31A /* ViewControllerStartButton.swift */; };
 		74A9DBC1244A94C20090F31A /* ViewControllerEnglish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBC0244A94C20090F31A /* ViewControllerEnglish.swift */; };
 		74A9DBC3244A94F70090F31A /* ViewControllerNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBC2244A94F70090F31A /* ViewControllerNotification.swift */; };
@@ -76,7 +76,7 @@
 		740BD7C42448023D00076F21 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		741B7F1F244BCE02008583D4 /* NotificationViewControllerSpeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewControllerSpeak.swift; sourceTree = "<group>"; };
 		741B7F22244BD875008583D4 /* EnglishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishCell.swift; sourceTree = "<group>"; };
-		748D1833244C1E7E006F37D8 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		748D1833244C1E7E006F37D8 /* sample.m4a */ = {isa = PBXFileReference; lastKnownFileType = text; path = sample.m4a; sourceTree = "<group>"; };
 		74A9DBBE244A946D0090F31A /* ViewControllerStartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStartButton.swift; sourceTree = "<group>"; };
 		74A9DBC0244A94C20090F31A /* ViewControllerEnglish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEnglish.swift; sourceTree = "<group>"; };
 		74A9DBC2244A94F70090F31A /* ViewControllerNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNotification.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				74A9DBC7244A9CE20090F31A /* lesson.mp3 */,
-				748D1833244C1E7E006F37D8 /* sample.mp3 */,
+				748D1833244C1E7E006F37D8 /* sample.m4a */,
 			);
 			path = sound;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 				740BD7B12447E25000076F21 /* LaunchScreen.storyboard in Resources */,
 				740BD7AE2447E25000076F21 /* Preview Assets.xcassets in Resources */,
 				740BD7AB2447E25000076F21 /* Assets.xcassets in Resources */,
-				748D1834244C1E7E006F37D8 /* sample.mp3 in Resources */,
+				748D1834244C1E7E006F37D8 /* sample.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -54,6 +54,7 @@ extension ViewController:AVSpeechSynthesizerDelegate{
                     guard let _ = self else{return}
                     // 1.0秒後に実行したい処理
                     let talker = AVSpeechSynthesizer()
+                    talker.stopSpeaking(at: .immediate)
                     let speech = AVSpeechUtterance(string: self!.nowEnglishString)
                     speech.voice = AVSpeechSynthesisVoice(language: "en-US")
                     talker.speak(speech)

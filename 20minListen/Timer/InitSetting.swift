@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         englishSetting()
         do{
             let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(AVAudioSession.Category.playback)
+            try audioSession.setCategory(AVAudioSession.Category.playAndRecord,mode: .default,options: [.defaultToSpeaker])
             try audioSession.setActive(true, options: [])
             print("音声を流します")
         }catch{

@@ -33,7 +33,6 @@ class EnglishListViewController: UIViewController {
         }
     }
     @objc private func viewWillEnterForeground(_ notification:Notification){
-        print("呼ばれたからリセと")
         UIApplication.shared.applicationIconBadgeNumber = 0
     }
     /*

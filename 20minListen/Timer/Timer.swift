@@ -33,7 +33,9 @@ extension ViewController:AVSpeechSynthesizerDelegate{
             content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "lesson.mp3"))
             content.body = nowEnglishString
             content.categoryIdentifier = "categorySelect"
+            content.summaryArgument = nowGetTime()
             let request = UNNotificationRequest(identifier: "category", content: content, trigger: nil)
+            print(request.content.threadIdentifier)
             let actionOne = UNNotificationAction(identifier: SelectAction.correct.rawValue,
                                                 title: "正解",
                                                 options: [])
@@ -57,9 +59,8 @@ extension ViewController:AVSpeechSynthesizerDelegate{
                     talker.speak(speech)
                 }
             })
-            
             self.timerLeft = TIMERLENGTH
-            addingEnglishArray()
+            addingEnglishArray(content.summaryArgument)
         }else{
             self.timerLeft -= Double(1.0)
         }
@@ -109,7 +110,6 @@ extension ViewController:AVSpeechSynthesizerDelegate{
         audioRecorder.stop()
         print("レコーディングがストップ")
     }
-    
     private func downLoadURL(_ url:URL,completion:((URL)->Void)?){
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let task = session.dataTask(with: url, completionHandler: {[weak self] (data, response, error) in
@@ -146,7 +146,7 @@ extension ViewController:AVSpeechSynthesizerDelegate{
         timerLabel.sizeToFit()
         timerLabel.center = CGPoint(x: self.view.center.x, y: startButton.frame.minY - 10 - timerLabel.frame.size.height/2)
     }
-    private func addingEnglishArray(){
+    private func addingEnglishArray(_ time:String){
         guard let parent = self.parent as? TabBarController else{return}
         if let collection = parent.viewControllers?.last?.children.first as? EnglishListViewController{
             if collection.englishData == nil{
@@ -161,10 +161,10 @@ extension ViewController:AVSpeechSynthesizerDelegate{
             if collection.englishDataTimeString == nil{
                 collection.englishDataTimeString = Dictionary<String,String>()
             }
-            collection.englishDataCollect![nowGetTime()] = .notAnswered
-            collection.englishDataTimeString![nowGetTime()] = nowEnglishString
+            collection.englishDataCollect![time] = .notAnswered
+            collection.englishDataTimeString![time] = nowEnglishString
             collection.englishData.append(nowEnglishString)
-            collection.englishTimeData.append(nowGetTime())
+            collection.englishTimeData.append(time)
             if collection.englihTabelView != nil{
                 collection.englihTabelView.reloadData()
             }

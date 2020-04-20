@@ -12,20 +12,21 @@
 		740BD7AB2447E25000076F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740BD7AA2447E25000076F21 /* Assets.xcassets */; };
 		740BD7AE2447E25000076F21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740BD7AD2447E25000076F21 /* Preview Assets.xcassets */; };
 		740BD7B12447E25000076F21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740BD7AF2447E25000076F21 /* LaunchScreen.storyboard */; };
-		740BD7BB2447E71D00076F21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740BD7BA2447E71D00076F21 /* ViewController.swift */; };
+		740BD7BB2447E71D00076F21 /* InitSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740BD7BA2447E71D00076F21 /* InitSetting.swift */; };
 		741B7F20244BCE02008583D4 /* NotificationViewControllerSpeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B7F1F244BCE02008583D4 /* NotificationViewControllerSpeak.swift */; };
-		741B7F23244BD875008583D4 /* EnglishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B7F22244BD875008583D4 /* EnglishCell.swift */; };
+		741B7F23244BD875008583D4 /* SpeakEnglish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B7F22244BD875008583D4 /* SpeakEnglish.swift */; };
+		744DEA2D244D2135000E199C /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744DEA2C244D2135000E199C /* FontAwesome_swift.framework */; };
 		748D1834244C1E7E006F37D8 /* sample.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 748D1833244C1E7E006F37D8 /* sample.m4a */; };
-		74A9DBBF244A946D0090F31A /* ViewControllerStartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBBE244A946D0090F31A /* ViewControllerStartButton.swift */; };
-		74A9DBC1244A94C20090F31A /* ViewControllerEnglish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBC0244A94C20090F31A /* ViewControllerEnglish.swift */; };
-		74A9DBC3244A94F70090F31A /* ViewControllerNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBC2244A94F70090F31A /* ViewControllerNotification.swift */; };
-		74A9DBC5244A95410090F31A /* ViewControllerTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBC4244A95410090F31A /* ViewControllerTimer.swift */; };
+		74A9DBBF244A946D0090F31A /* StartButtonSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBBE244A946D0090F31A /* StartButtonSetting.swift */; };
+		74A9DBC1244A94C20090F31A /* EnglishArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBC0244A94C20090F31A /* EnglishArray.swift */; };
+		74A9DBC3244A94F70090F31A /* NotificationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBC2244A94F70090F31A /* NotificationSetting.swift */; };
+		74A9DBC5244A95410090F31A /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBC4244A95410090F31A /* Timer.swift */; };
 		74A9DBC8244A9CE20090F31A /* lesson.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74A9DBC7244A9CE20090F31A /* lesson.mp3 */; };
 		74A9DBCA244AA2DB0090F31A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBC9244AA2DA0090F31A /* TabBarController.swift */; };
-		74A9DBD0244AA3650090F31A /* EnglishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBCF244AA3650090F31A /* EnglishListViewController.swift */; };
+		74A9DBD0244AA3650090F31A /* EnglishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9DBCF244AA3650090F31A /* EnglishList.swift */; };
 		74DD5484244AA61800B01AE0 /* EnglishListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD5483244AA61800B01AE0 /* EnglishListTableView.swift */; };
-		74DD5486244AA79200B01AE0 /* EnglishListViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD5485244AA79200B01AE0 /* EnglishListViewControllerData.swift */; };
-		74DD5488244AB4C800B01AE0 /* EnglishListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD5487244AB4C800B01AE0 /* EnglishListCell.swift */; };
+		74DD5486244AA79200B01AE0 /* EnglishListDataSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD5485244AA79200B01AE0 /* EnglishListDataSetting.swift */; };
+		74DD5488244AB4C800B01AE0 /* EnglishListCellSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD5487244AB4C800B01AE0 /* EnglishListCellSetting.swift */; };
 		74DD549D244BC3C400B01AE0 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740BD7C22448023D00076F21 /* UserNotifications.framework */; };
 		74DD549E244BC3C400B01AE0 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740BD7C42448023D00076F21 /* UserNotificationsUI.framework */; };
 		74DD54A1244BC3C400B01AE0 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD54A0244BC3C400B01AE0 /* NotificationViewController.swift */; };
@@ -71,22 +72,23 @@
 		740BD7AD2447E25000076F21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		740BD7B02447E25000076F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		740BD7B22447E25000076F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		740BD7BA2447E71D00076F21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		740BD7BA2447E71D00076F21 /* InitSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitSetting.swift; sourceTree = "<group>"; };
 		740BD7C22448023D00076F21 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		740BD7C42448023D00076F21 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		741B7F1F244BCE02008583D4 /* NotificationViewControllerSpeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewControllerSpeak.swift; sourceTree = "<group>"; };
-		741B7F22244BD875008583D4 /* EnglishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishCell.swift; sourceTree = "<group>"; };
+		741B7F22244BD875008583D4 /* SpeakEnglish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakEnglish.swift; sourceTree = "<group>"; };
+		744DEA2C244D2135000E199C /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		748D1833244C1E7E006F37D8 /* sample.m4a */ = {isa = PBXFileReference; lastKnownFileType = text; path = sample.m4a; sourceTree = "<group>"; };
-		74A9DBBE244A946D0090F31A /* ViewControllerStartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStartButton.swift; sourceTree = "<group>"; };
-		74A9DBC0244A94C20090F31A /* ViewControllerEnglish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEnglish.swift; sourceTree = "<group>"; };
-		74A9DBC2244A94F70090F31A /* ViewControllerNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNotification.swift; sourceTree = "<group>"; };
-		74A9DBC4244A95410090F31A /* ViewControllerTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTimer.swift; sourceTree = "<group>"; };
+		74A9DBBE244A946D0090F31A /* StartButtonSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonSetting.swift; sourceTree = "<group>"; };
+		74A9DBC0244A94C20090F31A /* EnglishArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishArray.swift; sourceTree = "<group>"; };
+		74A9DBC2244A94F70090F31A /* NotificationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetting.swift; sourceTree = "<group>"; };
+		74A9DBC4244A95410090F31A /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		74A9DBC7244A9CE20090F31A /* lesson.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lesson.mp3; sourceTree = "<group>"; };
 		74A9DBC9244AA2DA0090F31A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		74A9DBCF244AA3650090F31A /* EnglishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishListViewController.swift; sourceTree = "<group>"; };
+		74A9DBCF244AA3650090F31A /* EnglishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishList.swift; sourceTree = "<group>"; };
 		74DD5483244AA61800B01AE0 /* EnglishListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishListTableView.swift; sourceTree = "<group>"; };
-		74DD5485244AA79200B01AE0 /* EnglishListViewControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishListViewControllerData.swift; sourceTree = "<group>"; };
-		74DD5487244AB4C800B01AE0 /* EnglishListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishListCell.swift; sourceTree = "<group>"; };
+		74DD5485244AA79200B01AE0 /* EnglishListDataSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishListDataSetting.swift; sourceTree = "<group>"; };
+		74DD5487244AB4C800B01AE0 /* EnglishListCellSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishListCellSetting.swift; sourceTree = "<group>"; };
 		74DD549C244BC3C400B01AE0 /* notificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = notificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DD54A0244BC3C400B01AE0 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		74DD54A3244BC3C400B01AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744DEA2D244D2135000E199C /* FontAwesome_swift.framework in Frameworks */,
 				74DD549E244BC3C400B01AE0 /* UserNotificationsUI.framework in Frameworks */,
 				74DD549D244BC3C400B01AE0 /* UserNotifications.framework in Frameworks */,
 				CE367A2F57B78A5E2BBBFB54 /* Pods_notificationContent.framework in Frameworks */,
@@ -169,6 +172,7 @@
 		740BD7C12448023D00076F21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				744DEA2C244D2135000E199C /* FontAwesome_swift.framework */,
 				74DD54AC244BC67D00B01AE0 /* FontAwesome_swift.framework */,
 				740BD7C22448023D00076F21 /* UserNotifications.framework */,
 				740BD7C42448023D00076F21 /* UserNotificationsUI.framework */,
@@ -182,8 +186,8 @@
 		741B7F21244BD866008583D4 /* EnglishCell */ = {
 			isa = PBXGroup;
 			children = (
-				74DD5487244AB4C800B01AE0 /* EnglishListCell.swift */,
-				741B7F22244BD875008583D4 /* EnglishCell.swift */,
+				74DD5487244AB4C800B01AE0 /* EnglishListCellSetting.swift */,
+				741B7F22244BD875008583D4 /* SpeakEnglish.swift */,
 			);
 			path = EnglishCell;
 			sourceTree = "<group>";
@@ -200,11 +204,11 @@
 		74A9DBCB244AA2E40090F31A /* Timer */ = {
 			isa = PBXGroup;
 			children = (
-				740BD7BA2447E71D00076F21 /* ViewController.swift */,
-				74A9DBC4244A95410090F31A /* ViewControllerTimer.swift */,
-				74A9DBC2244A94F70090F31A /* ViewControllerNotification.swift */,
-				74A9DBBE244A946D0090F31A /* ViewControllerStartButton.swift */,
-				74A9DBC0244A94C20090F31A /* ViewControllerEnglish.swift */,
+				740BD7BA2447E71D00076F21 /* InitSetting.swift */,
+				74A9DBC4244A95410090F31A /* Timer.swift */,
+				74A9DBC2244A94F70090F31A /* NotificationSetting.swift */,
+				74A9DBBE244A946D0090F31A /* StartButtonSetting.swift */,
+				74A9DBC0244A94C20090F31A /* EnglishArray.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -212,8 +216,8 @@
 		74A9DBCC244AA2F40090F31A /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				74A9DBCF244AA3650090F31A /* EnglishListViewController.swift */,
-				74DD5485244AA79200B01AE0 /* EnglishListViewControllerData.swift */,
+				74A9DBCF244AA3650090F31A /* EnglishList.swift */,
+				74DD5485244AA79200B01AE0 /* EnglishListDataSetting.swift */,
 				74DD5483244AA61800B01AE0 /* EnglishListTableView.swift */,
 				741B7F21244BD866008583D4 /* EnglishCell */,
 			);
@@ -256,7 +260,7 @@
 				740BD79E2447E24F00076F21 /* Frameworks */,
 				740BD79F2447E24F00076F21 /* Resources */,
 				740BD7D32448023D00076F21 /* Embed App Extensions */,
-				B871C25522D763F6B56DA749 /* [CP] Embed Pods Frameworks */,
+				C9EEBE235EB363BA0E095B02 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -391,7 +395,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B871C25522D763F6B56DA749 /* [CP] Embed Pods Frameworks */ = {
+		C9EEBE235EB363BA0E095B02 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,19 +419,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74DD5486244AA79200B01AE0 /* EnglishListViewControllerData.swift in Sources */,
+				74DD5486244AA79200B01AE0 /* EnglishListDataSetting.swift in Sources */,
 				740BD7A52447E24F00076F21 /* AppDelegate.swift in Sources */,
 				74A9DBCA244AA2DB0090F31A /* TabBarController.swift in Sources */,
-				74A9DBC5244A95410090F31A /* ViewControllerTimer.swift in Sources */,
-				74A9DBC1244A94C20090F31A /* ViewControllerEnglish.swift in Sources */,
+				74A9DBC5244A95410090F31A /* Timer.swift in Sources */,
+				74A9DBC1244A94C20090F31A /* EnglishArray.swift in Sources */,
 				74DD5484244AA61800B01AE0 /* EnglishListTableView.swift in Sources */,
 				740BD7A72447E24F00076F21 /* SceneDelegate.swift in Sources */,
-				74A9DBC3244A94F70090F31A /* ViewControllerNotification.swift in Sources */,
-				74A9DBBF244A946D0090F31A /* ViewControllerStartButton.swift in Sources */,
-				740BD7BB2447E71D00076F21 /* ViewController.swift in Sources */,
-				74DD5488244AB4C800B01AE0 /* EnglishListCell.swift in Sources */,
-				74A9DBD0244AA3650090F31A /* EnglishListViewController.swift in Sources */,
-				741B7F23244BD875008583D4 /* EnglishCell.swift in Sources */,
+				74A9DBC3244A94F70090F31A /* NotificationSetting.swift in Sources */,
+				74A9DBBF244A946D0090F31A /* StartButtonSetting.swift in Sources */,
+				740BD7BB2447E71D00076F21 /* InitSetting.swift in Sources */,
+				74DD5488244AB4C800B01AE0 /* EnglishListCellSetting.swift in Sources */,
+				74A9DBD0244AA3650090F31A /* EnglishList.swift in Sources */,
+				741B7F23244BD875008583D4 /* SpeakEnglish.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +603,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tatsuya.S.-0minListen";
+				PRODUCT_BUNDLE_IDENTIFIER = twentyMinListen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -621,7 +625,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tatsuya.S.-0minListen";
+				PRODUCT_BUNDLE_IDENTIFIER = twentyMinListen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -640,7 +644,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tatsuya.S.-0minListen.notificationCOntent";
+				PRODUCT_BUNDLE_IDENTIFIER = twentyMinListen.notification;
 				PRODUCT_NAME = notificationContent;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -660,7 +664,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tatsuya.S.-0minListen.notificationCOntent";
+				PRODUCT_BUNDLE_IDENTIFIER = twentyMinListen.notification;
 				PRODUCT_NAME = notificationContent;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

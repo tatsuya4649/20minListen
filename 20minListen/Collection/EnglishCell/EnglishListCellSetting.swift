@@ -59,19 +59,20 @@ class EnglishListCell: UITableViewCell {
         repeatButton.backgroundColor = .black
         repeatButton.layer.cornerRadius = repeatButton.frame.size.height/2
         repeatButton.addTarget(self, action: #selector(clickRepeat), for: .touchUpInside)
-        repeatButton.center = CGPoint(x:width - 10 - repeatButton.frame.size.width/2,y:self.contentView.frame.size.height/2)
+        repeatButton.center = CGPoint(x:width - 30 - repeatButton.frame.size.width/2,y:self.contentView.frame.size.height/2)
         self.contentView.addSubview(repeatButton)
         offsetY += 5 + timer.frame.size.height
+        offsetY += 5 + correctLabel.frame.size.height
         label = UILabel()
         label.text = english
         label.font = .systemFont(ofSize: 15, weight: .regular)
         label.numberOfLines = 0
         label.lineBreakMode = .byCharWrapping
         label.textColor = .black
-        let rect = label.sizeThatFits(CGSize(width: 0.8*(repeatButton.frame.minX - correctLabel.frame.maxX), height: CGFloat.greatestFiniteMagnitude))
+        let rect = label.sizeThatFits(CGSize(width: 0.8*(repeatButton.frame.minX), height: CGFloat.greatestFiniteMagnitude))
         label.frame = CGRect(x: 0, y: 0, width: rect.width, height: rect.height)
-        label.center = CGPoint(x: correctLabel.frame.maxX + 10 + (repeatButton.frame.minX - correctLabel.frame.maxX)/2, y: offsetY + 20 + label.frame.size.height/2)
-        repeatButton.center = CGPoint(x:width - 10 - repeatButton.frame.size.width/2,y:label.center.y)
+        label.center = CGPoint(x: (repeatButton.frame.minX)/2, y: offsetY + 20 + label.frame.size.height/2)
+        repeatButton.center = CGPoint(x:width - 30 - repeatButton.frame.size.width/2,y:label.center.y)
         print(width)
         offsetY += max(correctLabel.frame.maxY,label.frame.maxY,repeatButton.frame.maxY)
         self.contentView.addSubview(label)
@@ -109,6 +110,7 @@ class EnglishListCell: UITableViewCell {
         heightCorrectLabel.sizeToFit()
         heightCorrectLabel.center = CGPoint(x: 5 + heightCorrectLabel.frame.size.width/2, y: heightTimer.frame.maxY + 5 + heightCorrectLabel.frame.size.height/2)
         heightOffsetY += 5 + heightTimer.frame.size.height
+        heightOffsetY += 5 + heightCorrectLabel.frame.size.height
         let heightRepeatButton = UIButton()
         heightRepeatButton.setTitle(String.fontAwesomeIcon(name: .volumeUp), for: .normal)
         heightRepeatButton.setTitleColor(.white, for: .normal)
@@ -119,16 +121,16 @@ class EnglishListCell: UITableViewCell {
         heightRepeatButton.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         heightRepeatButton.backgroundColor = .black
         heightRepeatButton.layer.cornerRadius = heightRepeatButton.frame.size.height/2
-        heightRepeatButton.center = CGPoint(x:width - 10 - heightRepeatButton.frame.size.width/2,y:heightRepeatButton.frame.size.height/2)
+        heightRepeatButton.center = CGPoint(x:width - 30 - heightRepeatButton.frame.size.width/2,y:heightRepeatButton.frame.size.height/2)
         let heightLabel = UILabel()
         heightLabel.text = english
         heightLabel.font = .systemFont(ofSize: 15, weight: .regular)
         heightLabel.numberOfLines = 0
         heightLabel.lineBreakMode = .byCharWrapping
         heightLabel.textColor = .black
-        let rect = heightLabel.sizeThatFits(CGSize(width: 0.8*(heightRepeatButton.frame.minX - heightCorrectLabel.frame.maxX), height: CGFloat.greatestFiniteMagnitude))
+        let rect = heightLabel.sizeThatFits(CGSize(width: 0.8*(heightRepeatButton.frame.minX), height: CGFloat.greatestFiniteMagnitude))
         heightLabel.frame = CGRect(x: 0, y: 0, width: rect.width, height: rect.height)
-        heightLabel.center = CGPoint(x: heightCorrectLabel.frame.maxX + 10 + (width - heightCorrectLabel.frame.maxX)/2, y: heightOffsetY + 20 + heightLabel.frame.size.height/2)
+        heightLabel.center = CGPoint(x: (heightRepeatButton.frame.minX)/2, y: heightOffsetY + 20 + heightLabel.frame.size.height/2)
         heightOffsetY += max(heightCorrectLabel.frame.maxY,heightLabel.frame.maxY)
         return heightOffsetY
     }
@@ -146,5 +148,9 @@ class EnglishListCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        print(self.frame)
+    }
+    
 }

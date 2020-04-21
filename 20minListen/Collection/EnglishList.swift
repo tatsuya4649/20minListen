@@ -19,6 +19,7 @@ class EnglishListViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.title = "コレクション"
+        self.navigationItem.leftBarButtonItem = editButtonItem
         settingEnglishData()
         settingTableView()
         NotificationCenter.default.addObserver(self, selector: #selector(viewWillEnterForeground(_:)), name: .NSExtensionHostWillEnterForeground, object: nil)
@@ -31,6 +32,12 @@ class EnglishListViewController: UIViewController {
         if let timer = parent.viewControllers?.first?.children.first as? ViewController{
             timer.appBadgeValue = nil
         }
+    }
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        //override前の処理を継続してさせる
+        super.setEditing(editing, animated: animated)
+        //tableViewの編集モードを切り替える
+        englihTabelView.isEditing = editing //editingはBool型でeditButtonに依存する変数
     }
     @objc private func viewWillEnterForeground(_ notification:Notification){
         UIApplication.shared.applicationIconBadgeNumber = 0

@@ -35,10 +35,10 @@ class ViewController: UIViewController {
         //英語の配列を準備する関数
         englishSetting()
         do{
+            print("音声を流します")
             let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
             try audioSession.setCategory(AVAudioSession.Category.playAndRecord,mode: .default,options: [.defaultToSpeaker])
-            try audioSession.setActive(true, options: [])
-            print("音声を流します")
+            try audioSession.setActive(true, options: [.notifyOthersOnDeactivation])
         }catch{
             print("Audio再生のセットカテゴリに失敗しました。")
         }

@@ -27,7 +27,6 @@ extension EnglishListViewController:UITableViewDelegate,UITableViewDataSource{
         }
         return cell
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         print(index)
         print("tableViewの高さを算出します。")
@@ -38,6 +37,15 @@ extension EnglishListViewController:UITableViewDelegate,UITableViewDataSource{
             return EnglishListCell.returnHeight(tableView.frame.size.width,english,time,correct)
         }
         return 0
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let time = englishTimeData[indexPath.row]
+        englishTimeData.remove(at: indexPath.row)
+        englishData.remove(at: indexPath.row)
+        englishDataCollect.removeValue(forKey: time)
+        englishDataTimeString.removeValue(forKey: time)
+        //tableViewCellの削除
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
     
     public func settingTableView(){

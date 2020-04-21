@@ -44,4 +44,5 @@ extension EnglishListCell:AVSpeechSynthesizerDelegate{
         repeatButtonAnimation = nil
         repeatButton.backgroundColor = .black
     }
+    
 }

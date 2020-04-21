@@ -53,11 +53,11 @@ extension ViewController:AVSpeechSynthesizerDelegate{
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {[weak self] in
                     guard let _ = self else{return}
                     // 1.0秒後に実行したい処理
-                    let talker = AVSpeechSynthesizer()
-                    talker.stopSpeaking(at: .immediate)
+                    self!.talker = AVSpeechSynthesizer()
+                    self!.talker.delegate = self
                     let speech = AVSpeechUtterance(string: self!.nowEnglishString)
                     speech.voice = AVSpeechSynthesisVoice(language: "en-US")
-                    talker.speak(speech)
+                    self!.talker.speak(speech)
                 }
             })
             self.timerLeft = TIMERLENGTH
@@ -66,7 +66,7 @@ extension ViewController:AVSpeechSynthesizerDelegate{
             self.timerLeft -= Double(1.0)
         }
     }
-    
+
     private func speechAudioRecording(){
         talker = AVSpeechSynthesizer()
         talker.delegate = self
@@ -104,12 +104,15 @@ extension ViewController:AVSpeechSynthesizerDelegate{
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
-        print("レコーディングがスタート")
+        print("スピーキングがスタート")
+    }
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        talker = nil
+        print("キャンセルされました")
     }
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        guard let _ = audioRecorder else{return}
-        audioRecorder.stop()
-        print("レコーディングがストップ")
+        talker = nil
+        print("スピーキングがストップ")
     }
     private func downLoadURL(_ url:URL,completion:((URL)->Void)?){
         let session = URLSession(configuration: URLSessionConfiguration.default)
